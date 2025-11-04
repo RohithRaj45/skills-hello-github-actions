@@ -8,8 +8,8 @@ jobs:
        - uses: actions/checkout@v3
        - run: |
           npm init -y
-          npm install
-          npm build
+          npm install express
+          npm run build
        - uses: actions/upload-artifact@main
          with:
            name: web pack Artifacts
