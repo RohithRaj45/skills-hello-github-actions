@@ -1,9 +1,17 @@
-name: Test
+name: CI
 on: push
 jobs:
-   job1:
-     name: Check
+   Build:
+     name: buikd
      runs-on: ubuntu-latest
      steps:
-       - run: echo "HelloWorls"
-     
+       - run: |
+          npm install
+          npm run build
+       - uses: actions/upload-artifacts@main
+         with:
+           name: web pack Artifacts
+           path: /public
+          
+         
+         
